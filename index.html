@@ -7,35 +7,43 @@
     <title>IE Test</title>
     <style>
 
-        .plan-selection-4G {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #7c1366 !important;
-            border-radius: 50%;
-            background-clip: content-box !important;
-            padding: 3px;
-            margin: 0 5px;
+        input[type='radio'] {
+        -webkit-appearance:none;
+        width:20px;
+        height:20px;
+        border:1px solid red;
+        border-radius:50%;
+        outline:none;
+        box-shadow:0 0 5px 0px red inset;
         }
 
-        .plan-selection-4G:checked {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-color: #7c1366 !important;
-            color: #7c1366 !important;
+        input[type='radio']:hover {
+        box-shadow:0 0 5px 0px orange inset;
         }
 
+        input[type='radio']:before {
+        content:'';
+        display:block;
+        width:60%;
+        height:60%;
+        margin: 20% auto;    
+        border-radius:50%;    
+        }
+        input[type='radio']:checked:before {
+        background:green;
+        }
     </style>
 </head>
 <body>
-    <div>
-        <input id="planIdInput-234" class="plan-selection-4G" name="planOptionRadio" type="radio">
+    <div style="margin: 200px;">
         <label for="name">
             Name
         </label>
+        <input id="planIdInput-234" class="plan-selection-4G" name="planOptionRadio" type="radio">
+        <label for="name">
+            Test
+        </label>
+        <input id="planIdInput-234" class="plan-selection-4G" name="planOptionRadio" type="radio">
     </div>
 </body>
 </html>
